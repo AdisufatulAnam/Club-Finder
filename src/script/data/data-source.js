@@ -3,11 +3,8 @@ function DataSource(onSuccess, onFailed) {
   this.onFailed = onFailed;
 }
 
-DataSource.prototype.searchClub = function (keyword) {
-const filteredClubs = clubs.filter(function (club) {
-    return club.name.toUpperCase().includes(keyword.toUpperCase());
-  });
-
+DataSource.prototype.searchClub = function (keyword) {//ubah pada function club dibawah ini.
+const filteredClubs = clubs.filter(club=> club.name.toUpperCase().includes(keyword.toUpperCase()));
   if (filteredClubs.length) {
     this.onSuccess(filteredClubs);
   } else {

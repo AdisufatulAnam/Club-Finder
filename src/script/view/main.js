@@ -1,14 +1,15 @@
-const main = function () {
+
+const main = () =>{ //ubah pada fariabel main menjadi => seberti berikut.
   const searchElement = document.querySelector('#searchElement');
   const buttonSearchElement = document.querySelector('#searchButtonElement');
   const clubListElement = document.querySelector('#clubList');
 
-  const onButtonSearchClicked = function () {
+  const onButtonSearchClicked = ()=> { //ubah function menjadi => pada baris ini.
     const dataSource = new DataSource(renderResult, fallbackResult);
     dataSource.searchClub(searchElement.value);
   };
 
-  const renderResult = function (results) {
+  const renderResult = (results) =>{ //ubah funtion menjadi => pada baris ini.
     clubListElement.innerHTML = '';
     results.forEach(function (club) {
       //penerapan destription object
@@ -30,7 +31,7 @@ const main = function () {
     });
   };
 
-  const fallbackResult = function (message) {
+  const fallbackResult = message => {//ubah pada baris ini dengan => untuk mengantikan funcion.
     clubListElement.innerHTML = '';
     clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
   };
