@@ -1,13 +1,18 @@
-function DataSource(onSuccess, onFailed) {
-  this.onSuccess = onSuccess;
-  this.onFailed = onFailed;
-}
+//rubah dari functionke class seperti dibawah.
+class DataSource{
+  constructor(onSuccess, onFailed){
+    this.onSuccess=onSuccess;
+    this.onFailed=onFailed;
+  }
 
-DataSource.prototype.searchClub = function (keyword) {//ubah pada function club dibawah ini.
+//ubah dengan mengunakan class.
+searchClub(keyword){//ubah pada function club dibawah ini.
 const filteredClubs = clubs.filter(club=> club.name.toUpperCase().includes(keyword.toUpperCase()));
+
   if (filteredClubs.length) {
     this.onSuccess(filteredClubs);
   } else {
-    this.onFailed(`${keyword} is not found`);
+         this.onFailed(`${keyword} is not found`);
   }
-};
+}
+}
