@@ -5,8 +5,11 @@ const main = () =>{ //ubah pada fariabel main menjadi => seberti berikut.
   const clubListElement = document.querySelector('#clubList');
 
   const onButtonSearchClicked = ()=> { //ubah function menjadi => pada baris ini.
-    const dataSource = new DataSource(renderResult, fallbackResult);
-    dataSource.searchClub(searchElement.value);
+    // const dataSource = new DataSource(renderResult, fallbackResult);
+    // dataSource.searchClub(searchElement.value);
+    DataSource.searchClub(searchElement.value)
+    .then(renderResult)
+    .catch(fallbackResult);
   };
 
   const renderResult = (results) =>{ //ubah funtion menjadi => pada baris ini.
