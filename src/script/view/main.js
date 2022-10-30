@@ -1,6 +1,6 @@
 //tambahkan import untuk mengambil data dari data source
+import DataSource from "../data/data-source.js";
 
-import DataSource from "../data/data-source";
 const main = () => { //ubah pada fariabel main menjadi => seberti berikut.
   const searchElement = document.querySelector('#searchElement');
   const buttonSearchElement = document.querySelector('#searchButtonElement');
