@@ -1,9 +1,11 @@
 //tambahkan import untuk mengambil data dari data source
 import DataSource from "../data/data-source.js";
+import '../component/search-bar.js'
 
 const main = () => { //ubah pada fariabel main menjadi => seberti berikut.
-  const searchElement = document.querySelector('#searchElement');
-  const buttonSearchElement = document.querySelector('#searchButtonElement');
+  const searchElement = document.querySelector('#search-bar');
+  //hapus searc buuton karena sudah dideklarasikan di bagian file serach-bar.js dengan coment
+  // const buttonSearchElement = document.querySelector('#searchButtonElement');
   const clubListElement = document.querySelector('#clubList');
 
   const onButtonSearchClicked = () => { //ubah function menjadi => pada baris ini.
@@ -44,8 +46,9 @@ const main = () => { //ubah pada fariabel main menjadi => seberti berikut.
     clubListElement.innerHTML = '';
     clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
   };
-
-  buttonSearchElement.addEventListener('click', onButtonSearchClicked);
+  //ubah pada buttonserch seperti berikut.
+  // buttonSearchElement.addEventListener('click', onButtonSearchClicked);
+  searchElement.clickEvent = onButtonSearchClicked;
 };
 //tambakan export 
 export default main;
