@@ -2,7 +2,7 @@
 projek ini merupakan projek web pencarian club bola dengan mengunakan api dari dicoding dengan mengunakan javaScript ECMAScript6, projek ini merupakan projek latihan  dari kelas belajar fundamental front end web developer
 ## fitur utama
 1.penampilan data club bola.<br>
-2.mencari movie <br>
+2.mencari club bola <br>
 ## cara menjalakan projek ini : 
 download projek ini jalankan perintah 
 ### npm install
